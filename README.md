@@ -14,7 +14,7 @@ This project implements a comprehensive ECG signal processing and analysis syste
 - Loading and handling ECG data from the MIT-BIH database
 - Signal processing and filtering
 - R-peak detection and heart rate analysis
-- Machine learning-based anomaly detection
+- Machine learning-based ECG abnormality detection
 - Visualization tools for ECG analysis
 
 ## Code Structure
@@ -133,19 +133,23 @@ plot_ecg_with_peaks(clean_signal, 'MLII', r_peaks)
 ## Sample Outputs
 
 ### 1. Original ECG Signal
-![Original ECG Signal](placeholder_for_original_signal.png)
+![Original ECG Signal](plots/Plot_Original.png)
 - Shows raw ECG signal from MIT-BIH database
+  
+### 2. Annotated Original Signal
+![Annotated ECG Signal](plots/Plot_Original_Ann.png)
+- Displays the annotated ECG signal with labeled annotations
 
-### 2. Filtered Signal
-![Filtered ECG Signal](placeholder_for_filtered_signal.png)
+### 3. Filtered Signal
+![Filtered ECG Signal](plots/Plot_Filters.png)
 - Demonstrates the effect of filtering pipeline
 
-### 3. R-peak Detection
-![R-peak Detection](placeholder_for_rpeak_detection.png)
+### 4. R-peak Detection
+![R-peak Detection](plots/Plots_RPeak.png)
 - Shows detected R-peaks and calculated heart rate
 
-### 4. Heart Rate Variability Analysis
-![HRV Analysis](placeholder_for_hrv_analysis.png)
+### 5. Heart Rate Variability Analysis
+![HRV Analysis](plots/Plot_RRInterval.png)
 - Displays RR intervals and HRV metrics
 
 ### 5. Machine Learning Results
@@ -179,26 +183,10 @@ Record ID | True Label | Predicted | Confidence | Abnormalities
 
 #### Visualization Plots
 
-##### 1. Confusion Matrix Heatmap
-![Confusion Matrix](plots/confusion_matrix.png)
-- Visual representation of model's prediction accuracy
-- Shows true positives, true negatives, false positives, and false negatives
-
-##### 2. ROC Curve
-![ROC Curve](plots/roc_curve.png)
-- Receiver Operating Characteristic curve
-- Shows trade-off between sensitivity and specificity
-- AUC (Area Under Curve) score: 0.93
-
-##### 3. Feature Importance Plot
-![Feature Importance](plots/feature_importance.png)
-- Relative importance of different features in classification
-- Shows which ECG characteristics are most predictive
-
-##### 4. Learning Curve
-![Learning Curve](plots/learning_curve.png)
-- Model's performance as training data size increases
-- Shows convergence and potential overfitting/underfitting
+##### 1. Confusion Matrix and ROC Curve
+![Confusion Matrix](plots/Plot_Confusion_ROC.png)
+- Shows true/false positives and negatives to evaluate classification accuracy.
+- Displays model’s sensitivity vs. specificity.
 
 ## Machine Learning Integration
 
